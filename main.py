@@ -19,4 +19,14 @@ regression_model_mse = mean_squared_error(x, y)
 print('MSE: ', math.sqrt(regression_model_mse))
 print('R squared value: ', model.score(x, y))
 
+print(model.coef_[0])
+print(model.intercept_[0])
+
+print('Prediction by the model: ', model.predict([[2000]]))
+
+plt.scatter(x, y, color='green')
+plt.plot(x, model.predict(x), color='black')
+plt.title('Liner Regression')
+plt.xlabel('Size')
+plt.ylabel('Price')
 
